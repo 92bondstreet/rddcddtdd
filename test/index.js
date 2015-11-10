@@ -1,7 +1,6 @@
 /*eslint-disable*/
 var expect = require('chai').expect;
 var is = require('../lib/is/index');
-Array.isArray = null;
 
 describe('is micro-checking library', function() {
   describe('is.arguments', function () {

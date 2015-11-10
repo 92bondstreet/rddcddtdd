@@ -1,5 +1,7 @@
 # 3 musketeers
 
+[![Build Status](https://travis-ci.org/92bondstreet/3-musketeers.svg?branch=master)](https://travis-ci.org/92bondstreet/3-musketeers)
+
 > RDD, CDD and TDD
 
 ## Introduction
