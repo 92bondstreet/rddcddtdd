@@ -30,6 +30,7 @@ Write the Unit tests with [expect](http://chaijs.com/guide/styles/#expect) as as
 * [is](./lib/is) library and [tests](./test/index.js)
 
 ```sh
+❯ npm i -g grunt-cli
 ❯ npm i
 ❯ grunt test
 ```
