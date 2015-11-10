@@ -11,8 +11,8 @@ var request = require('superagent'),
 
 /**
  * Covert unix time to JavaScript
- * @param  {String} unix 
- * @return {String} 
+ * @param  {String} unix
+ * @return {String}
  */
 
 function convertTime(unix) {
@@ -28,7 +28,7 @@ function convertTime(unix) {
 program
   .version(require('../package.json').version)
   .option('-l, --location <location>', 'weather location')
-  .option('-u, --unit <unit>', 'temperature unit')  
+  .option('-u, --unit <unit>', 'temperature unit')
   program.parse(process.argv);
 
 
@@ -42,9 +42,9 @@ conf.unit = program.unit || conf.unit;
 
 var table = new Table({
     head: [
-    'City', 
-    'Temp ' + (conf.unit === 'c' ? '°C' : '°F').grey, 
-    'Wind ' + 'km/h'.grey, 
+    'City',
+    'Temp ' + (conf.unit === 'c' ? '°C' : '°F').grey,
+    'Wind ' + 'km/h'.grey,
     'Humidity ' + '%'.grey]
   , colWidths: [16, 11, 11, 20]
 });
@@ -59,7 +59,7 @@ write(resolve(__dirname, '../etc/conf.json'), JSON.stringify(conf), function (er
 
 //request weather
 
-request.get('http://api.openweathermap.org/data/2.5/weather?q=' + conf.city + '&units=metric&mode=json', function(res){
+request.get('http://api.openweathermap.org/data/2.5/weather?&APPID=3e321f9414eaedbfab34983bda77a66e&q=' + conf.city + '&units=metric&mode=json', function(res){
 	var weather = JSON.parse(res.text),
 			temp = weather.main.temp;
 
