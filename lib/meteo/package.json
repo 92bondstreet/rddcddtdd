@@ -1,0 +1,23 @@
+{
+  "name": "meteo",
+  "version": "0.2.3",
+  "description": "Command line to get the weather based on location.",
+  "main": "index.js",
+  "scripts": {
+    "test": "make test"
+  },
+  "keywords": [
+    "weather",
+    "shell"
+  ],
+  "bin": {
+    "meteo": "bin/meteo"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "superagent": "~0.16.0",
+    "commander": "~2.1.0",
+    "colors": "~0.6.2",
+    "cli-table": "~0.3.0"
+  }
+}
